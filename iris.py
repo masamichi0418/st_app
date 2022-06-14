@@ -1,12 +1,12 @@
 # 基本ライブラリー
 import numpy as np
 import pandas as pd
- 
+
 # データセット
 ## データの読み込み
 from sklearn.datasets import load_iris
 iris = load_iris()
- 
+
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 df['target'] = iris.target
 df.loc[df['target'] == 0, 'target'] = "setosa"
